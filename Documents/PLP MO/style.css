@@ -1,109 +1,75 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #004aad;
-    color: white;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-bottom: 4px solid #003080;
+    background-color: #333;
+    padding: 10px 0;
 }
 
-
-nav ul {
-    list-style-type: none;
+header nav ul {
+    list-style: none;
     display: flex;
-    gap: 15px;
-    margin-top: 10px;
+    justify-content: center;
+    padding: 0;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+header nav ul li {
+    margin: 0 15px;
 }
 
-
-#about, #services {
-    margin-bottom: 30px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: white;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-table th, table td {
-    padding: 12px;
-    border: 1px solid #999;
-    text-align: left;
-}
-
-table th {
-    background-color: #f2f2f2;
-}
-
-img {
-    border: 5px solid #ddd;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-    max-width: 500px;
-    display: block;
-}
-form {
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    margin-top: 30px;
-    border-radius: 8px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"],
-select {
-    padding: 8px;
-    width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid #bbb;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #004aad;
+header nav ul li a {
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-input[type="submit"]:hover {
-    background-color: #003080;
-}
-
-footer {
-    text-align: center;
+main {
     padding: 20px;
-    margin-top: 40px;
-    background-color: #f1f1f1;
-    border-top: 2px solid #ccc;
+    text-align: center;
+}
+
+#services .grid-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul li a {
+        font-size: 16px;
+    }
+
+    .grid-item {
+        width: 100%;
+    }
 }
